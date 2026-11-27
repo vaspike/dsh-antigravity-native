@@ -1,5 +1,6 @@
 import { LlmAdapter, LlmError } from '@deepseek-ai/dsh-llm'
 import { RequestError } from '@agentclientprotocol/sdk'
+import { resolveDiscoveryWorkspace } from './config.js'
 import { AcpProcess } from './acp-process.js'
 import { NativeAcpSession } from './native-session.js'
 import {
@@ -52,7 +53,7 @@ export class AntigravityNativeAdapter extends LlmAdapter {
         config: this.config,
         agent: undefined,
         approval: undefined,
-        cwd: this.config.discoveryWorkspace,
+        cwd: resolveDiscoveryWorkspace(this.config),
       })
       try {
         const modelOption = session.configOptions.find(option => option.id === 'model')

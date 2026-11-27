@@ -2,7 +2,7 @@ import z from '@deepseek-ai/schemastery'
 
 export const Config = z.object({
   binaryPath: z.string().default('agy'),
-  discoveryWorkspace: z.string().default('/Users/river/code/agy-acp-test'),
+  discoveryWorkspace: z.string(),
   sandbox: z.boolean().default(true),
   requestTimeoutMs: z.natural().default(30000),
   stopGraceMs: z.natural().default(5000),
@@ -18,6 +18,13 @@ export function resolveConfig(input = {}) {
     }
   }
   if (!config.binaryPath.trim()) throw new Error('binaryPath must not be empty')
-  if (!config.discoveryWorkspace.trim()) throw new Error('discoveryWorkspace must not be empty')
+  if (config.discoveryWorkspace !== undefined && !config.discoveryWorkspace.trim()) {
+    throw new Error('discoveryWorkspace must not be empty when configured')
+  }
   return config
+}
+
+/** Resolve the fallback explicitly; ordinary Sessions use their own DSH workspace. */
+export function resolveDiscoveryWorkspace(config) {
+  return config.discoveryWorkspace ?? process.cwd()
 }

@@ -31,7 +31,7 @@ Duplicate retries, history edits, forks, regeneration, and DSH compaction are re
 | Field | Default | Meaning |
 | --- | --- | --- |
 | `binaryPath` | `agy` | Existing Antigravity CLI executable |
-| `discoveryWorkspace` | `/Users/river/code/agy-acp-test` | Workspace used only for model discovery and utility requests |
+| `discoveryWorkspace` | — | Optional workspace for model discovery and utility requests; when unset, the DSH process working directory is used. Ordinary agy Sessions always use their own DSH Session workspace |
 | `sandbox` | `true` | Pass `--sandbox` to `agy acp` |
 | `requestTimeoutMs` | `30000` | ACP setup and model configuration deadline |
 | `stopGraceMs` | `5000` | EOF grace before managed process termination |
