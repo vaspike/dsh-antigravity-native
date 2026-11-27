@@ -1,6 +1,24 @@
 # Antigravity native ACP
 
-A local DSH bundle that exposes existing Antigravity CLI logins through the native model selector, Workspace, Session list, and Chat. It is an append-only ACP client, not a DSH-history replay adapter or a subagent bridge.
+English | [中文](README.zh.md)
+
+A DSH bundle that exposes existing Antigravity CLI logins through the native model selector, Workspace, Session list, and Chat. It is an append-only ACP client, not a DSH-history replay adapter or a subagent bridge.
+
+Published as [`dsh-antigravity-native`](https://www.npmjs.com/package/dsh-antigravity-native) on npm.
+
+## Install from npm
+
+Requires DSH `0.2.2-rc.5`, Node.js `>=22.19`, and an installed, already authenticated Antigravity CLI (`agy`).
+
+```sh
+# DSH Web
+dsh plugin --profile web add dsh-antigravity-native
+
+# DSH Desktop
+dsh plugin --profile desktop add dsh-antigravity-native
+```
+
+You can also install `dsh-antigravity-native` through DSH's plugin manager. Enable the bundle, then create a new DSH Session and choose an **Antigravity ACP** model.
 
 ## Use
 

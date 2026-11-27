@@ -1,7 +1,6 @@
 {
-  "name": "@local/dsh-antigravity-native",
+  "name": "dsh-antigravity-native",
   "version": "0.1.0",
-  "private": true,
   "description": "Native DSH model, workspace, session and chat integration for existing Antigravity ACP logins.",
   "type": "module",
   "exports": {
@@ -16,6 +15,7 @@
     "docs",
     "icon.svg",
     "README.md",
+    "README.zh.md",
     "LICENSE"
   ],
   "dsh": {
@@ -46,6 +46,24 @@
     "node": ">=22.19"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaspike/dsh-antigravity-native.git"
+  },
+  "homepage": "https://github.com/vaspike/dsh-antigravity-native#readme",
+  "bugs": {
+    "url": "https://github.com/vaspike/dsh-antigravity-native/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "antigravity",
+    "acp",
+    "gemini"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@deepseek-ai/dsh-subprocess-local": "^0.2.2-rc.5"
   }

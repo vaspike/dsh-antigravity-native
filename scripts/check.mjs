@@ -29,6 +29,9 @@ for (const forbidden of [
   assert(!present, `Forbidden integration: ${forbidden}`)
 }
 const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'))
+assert.equal(pkg.name, 'dsh-antigravity-native')
+assert.notEqual(pkg.private, true)
+assert.equal(pkg.publishConfig?.access, 'public')
 for (const file of pkg.files) assert(existsSync(join(root, file)), `Missing packaged file: ${file}`)
 for (const locale of ['en', 'zh']) {
   const dictionary = JSON.parse(readFileSync(join(root, 'locale', `${locale}.json`), 'utf8'))
