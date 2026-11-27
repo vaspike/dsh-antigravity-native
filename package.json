@@ -1,6 +1,6 @@
 {
   "name": "dsh-antigravity-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Native DSH model, workspace, session and chat integration for existing Antigravity ACP logins.",
   "type": "module",
   "exports": {
