@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs'
-import { join } from 'node:path'
+import { dirname, join } from 'node:path'
 import { spawnSync } from 'node:child_process'
 
 const root = new URL('../', import.meta.url).pathname
@@ -36,6 +36,15 @@ for (const file of pkg.files) assert(existsSync(join(root, file)), `Missing pack
 for (const locale of ['en', 'zh']) {
   const dictionary = JSON.parse(readFileSync(join(root, 'locale', `${locale}.json`), 'utf8'))
   assert(dictionary.meta.title && dictionary.meta.description)
+  const detail = join(root, dictionary.meta.detail)
+  assert(existsSync(detail), `Missing detail document: ${dictionary.meta.detail}`)
+  const lines = readFileSync(detail, 'utf8').trim().split('\n')
+  assert.equal(lines.length, 1, 'Detail document must contain exactly one image line')
+  const image = lines[0].match(/^!\[[^\]]*\]\(([^)]+)\)$/)
+  assert(image, 'Detail document must be one Markdown image')
+  const imagePath = join(dirname(detail), image[1])
+  assert(existsSync(imagePath), `Missing detail image: ${image[1]}`)
+  assert(statSync(imagePath).size <= 5 * 1024 * 1024, 'Detail image exceeds 5 MiB')
 }
 const icon = readFileSync(join(root, 'icon.svg'), 'utf8')
 assert(icon.includes('width="36"') && icon.includes('viewBox="0 0 36 36"'))

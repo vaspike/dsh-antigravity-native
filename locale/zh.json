@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Antigravity 原生 ACP",
-    "description": "将 agy 公布的模型与思考等级加入 DSH 原生模型选择器。使用 Antigravity Provider 新建的 Session 通过原生工作区、Session 和 Chat 连接持久 agy ACP 对话。复用现有 agy 登录，不发起认证，只追加新用户消息，保留 agy 原生工具，并恢复或拒绝跨体系模型选择。绑定 Session 暂不支持编辑、分叉、重生成和 DSH Compaction。当前版本不导入已有 agy 会话。"
+    "description": "将 agy 公布的模型与思考等级加入 DSH 原生模型选择器。使用 Antigravity Provider 新建的 Session 通过原生工作区、Session 和 Chat 连接持久 agy ACP 对话。复用现有 agy 登录，不发起认证，只追加新用户消息，保留 agy 原生工具，并恢复或拒绝跨体系模型选择。绑定 Session 暂不支持编辑、分叉、重生成和 DSH Compaction。当前版本不导入已有 agy 会话。",
+    "detail": "docs/DETAIL.zh.md"
   }
 }

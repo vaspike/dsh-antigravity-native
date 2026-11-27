@@ -6,6 +6,8 @@
 
 npm 包：[`dsh-antigravity-native`](https://www.npmjs.com/package/dsh-antigravity-native)
 
+![DSH 原生 Chat 中的 Antigravity ACP 对话](docs/preview.webp)
+
 ## 从 npm 安装
 
 环境要求：DSH `0.2.2-rc.5`、Node.js `>=22.19`，以及已安装并已完成登录的 Antigravity CLI（`agy`）。

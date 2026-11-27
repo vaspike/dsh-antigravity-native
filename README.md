@@ -6,6 +6,8 @@ A DSH bundle that exposes existing Antigravity CLI logins through the native mod
 
 Published as [`dsh-antigravity-native`](https://www.npmjs.com/package/dsh-antigravity-native) on npm.
 
+![Antigravity ACP conversation running in native DSH Chat](docs/preview.webp)
+
 ## Install from npm
 
 Requires DSH `0.2.2-rc.5`, Node.js `>=22.19`, and an installed, already authenticated Antigravity CLI (`agy`).

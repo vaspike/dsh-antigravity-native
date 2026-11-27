@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Antigravity native ACP",
-    "description": "Adds agy-advertised models and thinking levels to the native DSH model selector. New Sessions created with the Antigravity provider use native Workspace, Session and Chat components backed by persistent agy ACP conversations. It reuses the existing agy login without starting authentication, forwards only new user messages, preserves agy-native tools, and restores or rejects cross-family model selections. Editing, forking, regeneration and DSH compaction are disabled for bound Sessions. Existing agy conversations are not imported in this version."
+    "description": "Adds agy-advertised models and thinking levels to the native DSH model selector. New Sessions created with the Antigravity provider use native Workspace, Session and Chat components backed by persistent agy ACP conversations. It reuses the existing agy login without starting authentication, forwards only new user messages, preserves agy-native tools, and restores or rejects cross-family model selections. Editing, forking, regeneration and DSH compaction are disabled for bound Sessions. Existing agy conversations are not imported in this version.",
+    "detail": "docs/DETAIL.md"
   }
 }
