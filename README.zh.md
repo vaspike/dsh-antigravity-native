@@ -78,3 +78,9 @@ node scripts/probe-real.mjs /Users/river/code/agy-acp-test
 ```
 
 真实探针会消耗 Antigravity 配额，且必须在已经完成登录的 CLI 环境中运行。
+
+## 友情链接
+
+- [V2EX](https://v2ex.com/)
+- [Linux.do](https://linux.do/)
+- [NodeSeek](https://www.nodeseek.com/)

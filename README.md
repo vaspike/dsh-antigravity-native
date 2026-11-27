@@ -78,3 +78,9 @@ node scripts/probe-real.mjs /Users/river/code/agy-acp-test
 ```
 
 The real probe consumes Antigravity quota and requires an already authenticated CLI.
+
+## Friendly links
+
+- [V2EX](https://v2ex.com/)
+- [Linux.do](https://linux.do/)
+- [NodeSeek](https://www.nodeseek.com/)
